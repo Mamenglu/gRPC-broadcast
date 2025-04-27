@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package broadcast;
+
+service Broadcast {
+  rpc Subscribe(SubscribeReq) returns (stream Frame);
+  rpc Publish(stream Frame) returns (Ack);
+}
+
+message SubscribeReq {
+  int64 replay_seq_no_start = 1;
+}
+
+message Frame {
+  bytes payload = 1;
+  uint32 seq_no = 2;
+  int64 timestamp = 3;//加一个时间戳 处理seq_no重复的情况 
+}
+
+message Ack {
+  string message = 1;
+}
