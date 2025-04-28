@@ -50,29 +50,12 @@ class BroadcastClient:
 
 
 
-
-# if __name__ == '__main__':
-
-#     client = BroadcastClient(server_address='0.0.0.0:50051')
-
-#     # 定义帧
-#     frames = [client.create_frame(seq_no=i, payload=f"message {i}") for i in range(1, 6)]
-#     # 发送帧和subscribe_seq_no_start
-#     client.run(subscribe_seq_no_start=0, frames_to_publish=frames)
-
-#模拟10个并发
-def simulate_clients(num_clients=10):
-    clients = []
-    frames = [client.create_frame(seq_no=i, payload=f"message {i}") for i in range(1, 6)]
-    
-    for i in range(num_clients):
-        client = BroadcastClient(server_address='0.0.0.0:50051')
-        thread = threading.Thread(target=client.run, args=(0, frames))
-        thread.start()
-        clients.append(thread)
-
-    for thread in clients:
-        thread.join()
-        
 if __name__ == '__main__':
-    simulate_clients(num_clients=10)  
+
+    client = BroadcastClient(server_address='0.0.0.0:50051')
+
+    # 定义帧
+    frames = [client.create_frame(seq_no=i, payload=f"message {i}") for i in range(1, 6)]
+    # 发送帧和subscribe_seq_no_start
+    client.run(subscribe_seq_no_start=0, frames_to_publish=frames)
+

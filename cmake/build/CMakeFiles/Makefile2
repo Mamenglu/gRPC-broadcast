@@ -64,8 +64,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/test/cmake/build
 
 # The main recursive "all" target.
 all: CMakeFiles/hw_grpc_proto.dir/all
-all: CMakeFiles/greeter_client.dir/all
-all: CMakeFiles/greeter_server.dir/all
+all: CMakeFiles/server.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,8 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/hw_grpc_proto.dir/clean
-clean: CMakeFiles/greeter_client.dir/clean
-clean: CMakeFiles/greeter_server.dir/clean
+clean: CMakeFiles/server.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -85,7 +83,7 @@ clean: CMakeFiles/greeter_server.dir/clean
 CMakeFiles/hw_grpc_proto.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw_grpc_proto.dir/build.make CMakeFiles/hw_grpc_proto.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw_grpc_proto.dir/build.make CMakeFiles/hw_grpc_proto.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/test/cmake/build/CMakeFiles --progress-num=5,6,7,8 "Built target hw_grpc_proto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/test/cmake/build/CMakeFiles --progress-num=1,2,3,4 "Built target hw_grpc_proto"
 .PHONY : CMakeFiles/hw_grpc_proto.dir/all
 
 # Build rule for subdir invocation for target.
@@ -105,56 +103,30 @@ CMakeFiles/hw_grpc_proto.dir/clean:
 .PHONY : CMakeFiles/hw_grpc_proto.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/greeter_client.dir
+# Target rules for target CMakeFiles/server.dir
 
 # All Build rule for target.
-CMakeFiles/greeter_client.dir/all: CMakeFiles/hw_grpc_proto.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_client.dir/build.make CMakeFiles/greeter_client.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_client.dir/build.make CMakeFiles/greeter_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/test/cmake/build/CMakeFiles --progress-num=1,2 "Built target greeter_client"
-.PHONY : CMakeFiles/greeter_client.dir/all
+CMakeFiles/server.dir/all: CMakeFiles/hw_grpc_proto.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/test/cmake/build/CMakeFiles --progress-num=5,6 "Built target server"
+.PHONY : CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/greeter_client.dir/rule: cmake_check_build_system
+CMakeFiles/server.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/test/cmake/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/greeter_client.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/test/cmake/build/CMakeFiles 0
-.PHONY : CMakeFiles/greeter_client.dir/rule
+.PHONY : CMakeFiles/server.dir/rule
 
 # Convenience name for target.
-greeter_client: CMakeFiles/greeter_client.dir/rule
-.PHONY : greeter_client
+server: CMakeFiles/server.dir/rule
+.PHONY : server
 
 # clean rule for target.
-CMakeFiles/greeter_client.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_client.dir/build.make CMakeFiles/greeter_client.dir/clean
-.PHONY : CMakeFiles/greeter_client.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/greeter_server.dir
-
-# All Build rule for target.
-CMakeFiles/greeter_server.dir/all: CMakeFiles/hw_grpc_proto.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_server.dir/build.make CMakeFiles/greeter_server.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_server.dir/build.make CMakeFiles/greeter_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/test/cmake/build/CMakeFiles --progress-num=3,4 "Built target greeter_server"
-.PHONY : CMakeFiles/greeter_server.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/greeter_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/test/cmake/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/greeter_server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/test/cmake/build/CMakeFiles 0
-.PHONY : CMakeFiles/greeter_server.dir/rule
-
-# Convenience name for target.
-greeter_server: CMakeFiles/greeter_server.dir/rule
-.PHONY : greeter_server
-
-# clean rule for target.
-CMakeFiles/greeter_server.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_server.dir/build.make CMakeFiles/greeter_server.dir/clean
-.PHONY : CMakeFiles/greeter_server.dir/clean
+CMakeFiles/server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/clean
+.PHONY : CMakeFiles/server.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

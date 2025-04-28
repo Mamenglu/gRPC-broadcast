@@ -1,5 +1,4 @@
 /home/ubuntu/test/cmake/build/CMakeFiles/hw_grpc_proto.dir
-/home/ubuntu/test/cmake/build/CMakeFiles/greeter_client.dir
-/home/ubuntu/test/cmake/build/CMakeFiles/greeter_server.dir
+/home/ubuntu/test/cmake/build/CMakeFiles/server.dir
 /home/ubuntu/test/cmake/build/CMakeFiles/edit_cache.dir
 /home/ubuntu/test/cmake/build/CMakeFiles/rebuild_cache.dir

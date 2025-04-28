@@ -130,30 +130,17 @@ hw_grpc_proto/fast:
 .PHONY : hw_grpc_proto/fast
 
 #=============================================================================
-# Target rules for targets named greeter_client
+# Target rules for targets named server
 
 # Build rule for target.
-greeter_client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 greeter_client
-.PHONY : greeter_client
+server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-greeter_client/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_client.dir/build.make CMakeFiles/greeter_client.dir/build
-.PHONY : greeter_client/fast
-
-#=============================================================================
-# Target rules for targets named greeter_server
-
-# Build rule for target.
-greeter_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 greeter_server
-.PHONY : greeter_server
-
-# fast build rule for target.
-greeter_server/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_server.dir/build.make CMakeFiles/greeter_server.dir/build
-.PHONY : greeter_server/fast
+server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
 
 broadcast.grpc.pb.o: broadcast.grpc.pb.cc.o
 .PHONY : broadcast.grpc.pb.o
@@ -203,53 +190,29 @@ broadcast.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw_grpc_proto.dir/build.make CMakeFiles/hw_grpc_proto.dir/broadcast.pb.cc.s
 .PHONY : broadcast.pb.cc.s
 
-greeter_client.o: greeter_client.cc.o
-.PHONY : greeter_client.o
+server.o: server.cc.o
+.PHONY : server.o
 
 # target to build an object file
-greeter_client.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_client.dir/build.make CMakeFiles/greeter_client.dir/greeter_client.cc.o
-.PHONY : greeter_client.cc.o
+server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cc.o
+.PHONY : server.cc.o
 
-greeter_client.i: greeter_client.cc.i
-.PHONY : greeter_client.i
-
-# target to preprocess a source file
-greeter_client.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_client.dir/build.make CMakeFiles/greeter_client.dir/greeter_client.cc.i
-.PHONY : greeter_client.cc.i
-
-greeter_client.s: greeter_client.cc.s
-.PHONY : greeter_client.s
-
-# target to generate assembly for a file
-greeter_client.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_client.dir/build.make CMakeFiles/greeter_client.dir/greeter_client.cc.s
-.PHONY : greeter_client.cc.s
-
-greeter_server.o: greeter_server.cc.o
-.PHONY : greeter_server.o
-
-# target to build an object file
-greeter_server.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_server.dir/build.make CMakeFiles/greeter_server.dir/greeter_server.cc.o
-.PHONY : greeter_server.cc.o
-
-greeter_server.i: greeter_server.cc.i
-.PHONY : greeter_server.i
+server.i: server.cc.i
+.PHONY : server.i
 
 # target to preprocess a source file
-greeter_server.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_server.dir/build.make CMakeFiles/greeter_server.dir/greeter_server.cc.i
-.PHONY : greeter_server.cc.i
+server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cc.i
+.PHONY : server.cc.i
 
-greeter_server.s: greeter_server.cc.s
-.PHONY : greeter_server.s
+server.s: server.cc.s
+.PHONY : server.s
 
 # target to generate assembly for a file
-greeter_server.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/greeter_server.dir/build.make CMakeFiles/greeter_server.dir/greeter_server.cc.s
-.PHONY : greeter_server.cc.s
+server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cc.s
+.PHONY : server.cc.s
 
 # Help Target
 help:
@@ -259,21 +222,17 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... greeter_client"
-	@echo "... greeter_server"
 	@echo "... hw_grpc_proto"
+	@echo "... server"
 	@echo "... broadcast.grpc.pb.o"
 	@echo "... broadcast.grpc.pb.i"
 	@echo "... broadcast.grpc.pb.s"
 	@echo "... broadcast.pb.o"
 	@echo "... broadcast.pb.i"
 	@echo "... broadcast.pb.s"
-	@echo "... greeter_client.o"
-	@echo "... greeter_client.i"
-	@echo "... greeter_client.s"
-	@echo "... greeter_server.o"
-	@echo "... greeter_server.i"
-	@echo "... greeter_server.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 .PHONY : help
 
 
